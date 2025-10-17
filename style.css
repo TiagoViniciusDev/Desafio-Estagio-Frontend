@@ -6,14 +6,23 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
-body{
-    
-}
-
 :root{
     --mainColor: #FF4141;
-    --bgColor: #F3F3F3;
+    --mainColor2: #F3F3F3;
     --color2: #d4d4d4;
+    --BgColor: #ffffff;
+    --textColor: black;
+}
+
+.darkMode{
+  color: #f1f1f1;
+  --mainColor2: #1E1E1E;
+  --BgColor: #121212;
+  --textColor: #F5F5F5;
+}
+
+body{
+    background-color: var(--BgColor);
 }
 
 .container{
@@ -50,7 +59,6 @@ header .logo .icon{
 
 header .logo .icon img{
     width: 70%;
-    /* height: 50%; */
 }
 
 header .logo h2{
@@ -74,7 +82,7 @@ header .rightSide nav{
 header .rightSide nav a{
     text-transform: uppercase;
     text-decoration: none;
-    color: black;
+    color: inherit;
     font-size: 1.2em;
     font-weight: 400;
 }
@@ -86,7 +94,7 @@ header .rightSide nav a:first-of-type{
 header .rightSide .changeTheme{
     width: 1.5em;
     height: 1.5em;
-    background-color: var(--bgColor);
+    background-color: var(--mainColor2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,14 +107,13 @@ header .rightSide .changeTheme img{
 
 main{
     height: 700px;
-    background-color: var(--bgColor);
+    background-color: var(--mainColor2);
     overflow: hidden;
 }
 
 main .container{
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     position: relative;
     padding: 0 20em;
 }
@@ -165,7 +172,7 @@ footer .container .top .left{
 }
 
 footer .container .top .left .footerIcon{
-    background-color: var(--color2);
+    background-color: var(--mainColor2);
     display: flex;
     width: 1.5em;
     height: 1.5em;
@@ -175,8 +182,8 @@ footer .container .top .left .footerIcon{
     border-radius: 100%;
 }
 
-footer .container .top .left .footerIcon img{
-    width: 100%;
+footer .container .top .left .footerIcon svg{
+    color: var(--textColor);
 }
 
 footer .container .top .left .info{
@@ -204,8 +211,14 @@ footer .container .top .right .socilMedia{
     gap: 0.5em;
 }
 
-footer .container .top .right .socilMedia img{
+footer .container .top .right .socilMedia a{
+    
+}
+
+footer .container .top .right .socilMedia svg{
     width: 3em;
+    height: 3em;
+    color: var(--textColor);
 }
 
 footer .container .bottom{
