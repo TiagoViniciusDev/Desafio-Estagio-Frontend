@@ -10,9 +10,9 @@
 Para o desafio, escolhi como tema uma **academia fictícia** chamada **SuperFIT**.  
 O projeto contempla **todas as funcionalidades e regras exigidas** conforme a proposta do desafio.
 
-![Imagem do Projeto](Images/Readme/projetoImg.png)
+![Imagem do Projeto](images/Readme/projetoImg.png)
 
-![Imagem do Projeto com Tema Escuro](Images/Readme/projetoImgDark.png)
+![Imagem do Projeto com Tema Escuro](images/Readme/projetoImgDark.png)
 
 ---
 
@@ -20,7 +20,7 @@ O projeto contempla **todas as funcionalidades e regras exigidas** conforme a pr
 
 A prototipação da interface foi **inteiramente criada por mim** no Figma:
 
-![Imagem da Prototipação Feita no Figma](Images/Readme/FigmaImg.png)
+![Imagem da Prototipação Feita no Figma](images/Readme/FigmaImg.png)
 
 ---
 
