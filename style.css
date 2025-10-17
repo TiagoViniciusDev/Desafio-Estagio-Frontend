@@ -30,6 +30,10 @@ body{
     margin: 0 auto;
 }
 
+.displayNone{
+    display: none;
+}
+
 header{
     
 }
@@ -38,7 +42,7 @@ header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2em 0;
+    padding: 2em 1em;
 }
 
 header .logo{
@@ -70,7 +74,7 @@ header .logo h2{
 header .rightSide{
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 header .rightSide nav{
@@ -91,9 +95,29 @@ header .rightSide nav a:first-of-type{
     border-bottom: 1.5px solid var(--mainColor);
 }
 
+/* NAV MOBILE */
+header .rightSide .mobileNav{
+    display: none;
+}
+
+header .rightSide button{
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: transparent;
+}
+
+header .rightSide button svg{
+    width: 2em;
+    height: 2em;
+    color: var(--textColor);
+}
+/*  */
+
 header .rightSide .changeTheme{
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.7em;
+    height: 1.7em;
     background-color: var(--mainColor2);
     display: flex;
     justify-content: center;
@@ -152,7 +176,7 @@ main .mainText button{
 }
 
 main .mainText button:hover{
-    outline: 1px solid black;
+    outline: 1px solid var(--textColor);
 }
 
 footer .container{
@@ -225,4 +249,24 @@ footer .container .bottom{
     text-align: center;
     margin-top: 4em;
     margin-bottom: 2em;
+}
+
+@media screen and (max-width: 720px){
+    header .rightSide{
+        flex-direction: row-reverse;
+    }
+
+    /* header .rightSide .mobileNav{
+        display: inline;
+        background-color: red;
+    } */
+
+    header .rightSide .desktopNav{
+        display: none;
+    }
+
+    header .rightSide button{
+        display: block;
+        padding-top: 0.2em;
+    }
 }
