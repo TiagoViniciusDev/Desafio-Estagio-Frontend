@@ -18,6 +18,7 @@ p, span, a{
     --color2: #d4d4d4;
     --BgColor: #ffffff;
     --textColor: black;
+    --mainColor2Opacity: rgba(243, 243, 243, 0.3)
 }
 
 .darkMode{
@@ -331,6 +332,15 @@ footer .container .bottom{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        background-color: var(--mainColor2Opacity);
+        padding: 1.5em;
+        backdrop-filter: blur(2px); /* desfoca o que está por trás */
+        -webkit-backdrop-filter: blur(2px); /* compatibilidade com Safari */
+        border: 1px solid var(--textColor);
+    }
+
+    main .mainText p{
+        font-weight: 600;
     }
 
     main .container img{
