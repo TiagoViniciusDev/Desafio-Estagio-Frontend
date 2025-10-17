@@ -1,6 +1,4 @@
-
 //Mudar Tema
-
 const toggleTheme = document.getElementById("toggleTheme"); //Pega elemento por ID
 const themeIcon = document.getElementById("themeIcon");
 
@@ -23,6 +21,7 @@ toggleTheme.addEventListener("click", () => { //Evento de clique
     localStorage.setItem("theme", "light");
   }
 });
+
 
 
 //MENU MOBILE
@@ -55,5 +54,12 @@ if (
 ) {
     closeMobileMenu();
 }
+});
+
+// ANIMAÇÃO TEXTO "SAINDO DE TRÁS DA IMAGEM"
+window.addEventListener("load", () => {
+  if (window.innerWidth > 720) {
+    document.body.classList.add("loaded");
+  }
 });
 

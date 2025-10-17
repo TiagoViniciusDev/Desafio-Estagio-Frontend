@@ -301,6 +301,7 @@ footer .container .bottom{
     margin-bottom: 2em;
 }
 
+/* RESPONSIVIDADE PARA DISPOSITIVOS COM TELAS MENORES */
 @media screen and (max-width: 720px){
     header .rightSide{
         flex-direction: row-reverse;
@@ -341,4 +342,40 @@ footer .container .bottom{
     footer .container .top .right .socilMedia{
         justify-content: center;
     }
+}
+
+/* ANIMAÇÃO DE TEXTO DO MAIN SE MOVENDO AO ABRIR O SITE*/
+@media screen and (min-width: 850px) {
+  main .container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  main .mainBackground {
+    position: relative;
+    z-index: 3;
+  }
+
+  main .mainBackground img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 3;
+  }
+
+  main .mainText {
+    position: relative;
+    z-index: 2; /* Começa atrás da imagem */
+    transform: translateX(-40vw); /* Posição de onde começa o mainText */
+    opacity: 0;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+  }
+
+  /* Faz a animação iniciar ao abrir o site */
+  body.loaded main .mainText {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 4;
+  }
 }
