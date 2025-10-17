@@ -11,10 +11,8 @@ body{
 }
 
 :root{
-    /* --mainColor: #FF714B; */
-    /* --mainColor: #FF6B00; */
     --mainColor: #FF4141;
-    --bgColor: #D9D9D9;
+    --bgColor: #F3F3F3;
 }
 
 .container{
@@ -69,7 +67,7 @@ header .rightSide{
 header .rightSide nav{
     display: flex;
     align-items: top;
-    gap: 0.8em;
+    gap: 1.5em;
 }
 
 header .rightSide nav a{
@@ -96,4 +94,55 @@ header .rightSide .changeTheme{
 
 header .rightSide .changeTheme img{
     width: 60%;
+}
+
+main{
+    height: 700px;
+    background-color: var(--bgColor);
+    overflow: hidden;
+}
+
+main .container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    position: relative;
+    padding: 0 20em;
+}
+
+main .container img{
+    /* padding-top: 2em; */
+    position: absolute;
+}
+
+main .mainText{
+    z-index: 2;
+    max-width: 20em;
+    margin: 15em 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: flex-end;
+}
+
+main .mainText h1{
+    color: var(--mainColor);
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+main .mainText button{
+    width: fit-content;
+    padding: 1em 2em;
+    background-color: var(--mainColor);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+main .mainText button:hover{
+    outline: 1px solid black;
 }
