@@ -122,7 +122,7 @@ header .rightSide .mobileNav{
   position: fixed;
   top: 0;
   right: 0;
-  width: 40%; /* ajuste conforme o design */
+  width: 70%; /* ajuste conforme o design */
   max-width: 300px;
   height: 100vh;
   background-color: var(--BgColor);
