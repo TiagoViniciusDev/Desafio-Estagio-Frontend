@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/icons/logoBgRed.ico">
     <title>SuperFit</title>
 </head>
 <body>
@@ -22,11 +23,15 @@
                     <a href="">Contato</a>
                 </nav>
 
-                <button>
+                <button id="menuBtn" class="mobileMenuBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" d="M15 4H1V2h14zm0 5H1V7h14zM1 14h14v-2H1z"/></svg>
                 </button>
 
-                <nav class="mobileNav displayNone">
+                <nav class="mobileNav displayNone" id="mobileNav">
+                    <div class="headerNav">
+                        <h2>SUPERFIT</h2>
+                        <svg id="closeMenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000000" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-3.4 14L12 13.4L8.4 17L7 15.6l3.6-3.6L7 8.4L8.4 7l3.6 3.6L15.6 7L17 8.4L13.4 12l3.6 3.6l-1.4 1.4Z"/></svg>
+                    </div>
                     <a href="">Home</a>
                     <a href="">Serviços</a>
                     <a href="">Contato</a>

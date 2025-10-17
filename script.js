@@ -1,12 +1,14 @@
-//Pega elemento por ID
-const toggleTheme = document.getElementById("toggleTheme");
+
+//Mudar Tema
+
+const toggleTheme = document.getElementById("toggleTheme"); //Pega elemento por ID
 const themeIcon = document.getElementById("themeIcon");
 
 // Verifica se o usuário tem tema salvo no localStorage
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark") {
-  document.body.classList.add("darkMode");
+  document.body.classList.add("darkMode"); //Adiciona classe darkMode
   themeIcon.src = "images/icons/lightTheme.png";
 }
 
@@ -21,3 +23,37 @@ toggleTheme.addEventListener("click", () => { //Evento de clique
     localStorage.setItem("theme", "light");
   }
 });
+
+
+//MENU MOBILE
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileNav = document.getElementById("mobileNav");
+const closeMenu = document.getElementById("closeMenu");
+
+menuBtn.addEventListener("click", () => { // Abre o menu
+mobileNav.classList.remove("displayNone");
+void mobileNav.offsetWidth; // Força reflow para garantir que o CSS transition funcione
+mobileNav.classList.add("active");
+});
+
+function closeMobileMenu() { //Fecha o menu depois de um tempo
+mobileNav.classList.remove("active");
+setTimeout(() => {
+    mobileNav.classList.add("displayNone");
+}, 400);
+}
+
+closeMenu.addEventListener("click", closeMobileMenu);
+
+
+document.addEventListener("click", (e) => { //Fecha menu ao clicar fora
+if (
+    !mobileNav.classList.contains("displayNone") &&
+    !mobileNav.contains(e.target) &&
+    !menuBtn.contains(e.target)
+) {
+    closeMobileMenu();
+}
+});
+

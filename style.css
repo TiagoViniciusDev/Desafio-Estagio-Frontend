@@ -33,11 +33,7 @@ body{
 }
 
 .displayNone{
-    display: none;
-}
-
-header{
-    
+    display: none !important;
 }
 
 header .container{
@@ -97,16 +93,12 @@ header .rightSide nav a:hover{
     color: var(--mainColor);
 }
 
-header .rightSide nav a:first-of-type{
+header .rightSide .desktopNav a:first-of-type{
     border-bottom: 1.5px solid var(--mainColor);
 }
 
 /* NAV MOBILE */
-header .rightSide .mobileNav{
-    display: none;
-}
-
-header .rightSide button{
+header .rightSide .mobileMenuBtn{
     display: none;
     width: fit-content;
     height: fit-content;
@@ -114,11 +106,56 @@ header .rightSide button{
     background-color: transparent;
 }
 
-header .rightSide button svg{
+header .rightSide .mobileMenuBtn svg{
     width: 2em;
     height: 2em;
     color: var(--textColor);
 }
+
+header .rightSide .mobileNav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%; /* ajuste conforme o design */
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--BgColor);
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  transform: translateX(100%); /* começa fora da tela */
+  transition: transform 0.4s ease; /* suavidade */
+  z-index: 100;
+}
+
+header .rightSide .mobileNav.active {
+  transform: translateX(0);
+}
+
+header .rightSide .mobileNav .headerNav{
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .rightSide .mobileNav .headerNav svg{
+    height: 1.7em;
+    width: 1.7em;
+}
+
+header .rightSide .mobileNav a{
+    padding: 1em 2em;
+    margin: 0;
+}
+
+header .rightSide .mobileNav a:hover{
+    background-color: var(--color2);
+    color: var(--textColor);
+}
+
+
 /*  */
 
 header .rightSide .changeTheme{
@@ -142,6 +179,7 @@ main{
     height: 700px;
     background-color: var(--mainColor2);
     overflow: hidden;
+    transition: 1s;
 }
 
 main .container{
@@ -268,16 +306,11 @@ footer .container .bottom{
         flex-direction: row-reverse;
     }
 
-    /* header .rightSide .mobileNav{
-        display: inline;
-        background-color: red;
-    } */
-
     header .rightSide .desktopNav{
         display: none;
     }
 
-    header .rightSide button{
+    header .rightSide .mobileMenuBtn{
         display: block;
         padding-top: 0.2em;
     }
