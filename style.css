@@ -57,6 +57,7 @@ header .logo .icon img{
 header .logo h2{
     text-transform: uppercase;
     font-size: 2em;
+    font-weight: 800;
 }
 
 header .rightSide{
@@ -67,7 +68,7 @@ header .rightSide{
 
 header .rightSide nav{
     display: flex;
-    align-items: center;
+    align-items: top;
     gap: 0.8em;
 }
 
@@ -76,12 +77,16 @@ header .rightSide nav a{
     text-decoration: none;
     color: black;
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 400;
+}
+
+header .rightSide nav a:first-of-type{
+    border-bottom: 1.5px solid var(--mainColor);
 }
 
 header .rightSide .changeTheme{
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
     background-color: var(--bgColor);
     display: flex;
     justify-content: center;
