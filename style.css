@@ -1,3 +1,94 @@
-h2{
-    background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+body{
+    
+}
+
+:root{
+    /* --mainColor: #FF714B; */
+    /* --mainColor: #FF6B00; */
+    --mainColor: #FF4141;
+    --bgColor: #D9D9D9;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header{
+    
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+header .logo{
+    display: flex;
+    gap: 0.3em;
+    align-items: center;
+}
+
+header .logo .icon{
+    width: 2em;
+    height: 2em;
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3em;
+}
+
+header .logo .icon img{
+    width: 70%;
+    /* height: 50%; */
+}
+
+header .logo h2{
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+header .rightSide{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+header .rightSide nav{
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+
+header .rightSide nav a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+header .rightSide .changeTheme{
+    width: 2em;
+    height: 2em;
+    background-color: var(--bgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3em;
+}
+
+header .rightSide .changeTheme img{
+    width: 60%;
 }
